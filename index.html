@@ -3,95 +3,353 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Seu Projeto</title>
-  <meta name="description" content="Uma frase curta explicando o valor do projeto." />
+  <title>Projeto DJs na Pista • Line Neon para sua Festa</title>
+  <meta name="description" content="Monte um line completo com +40 DJs (funk, mega funk, tech house, rap, trap) com cachês acessíveis e parceria Hotlines com taxa reduzida." />
+  <meta name="theme-color" content="#070711" />
 
-  <style>
-    :root { --bg:#0b0f19; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --cta:#22c55e; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: radial-gradient(1200px 600px at 20% 0%, #1f2937 0%, var(--bg) 55%);
-      color: var(--text);
-    }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 56px 20px; }
-    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; }
-    @media (max-width: 860px){ .hero{ grid-template-columns: 1fr; } }
-    .card {
-      background: color-mix(in oklab, var(--card) 88%, transparent);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35);
-      backdrop-filter: blur(8px);
-    }
-    h1 { font-size: clamp(30px, 4vw, 44px); line-height: 1.05; margin: 0 0 12px; }
-    p { margin: 0 0 14px; color: var(--muted); font-size: 16px; line-height: 1.6; }
-    .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
-    .badge { border:1px solid rgba(255,255,255,.10); padding:8px 10px; border-radius: 999px; color: var(--text); font-size: 13px; }
-    .cta {
-      display:inline-flex; align-items:center; justify-content:center;
-      padding: 14px 16px; border-radius: 12px;
-      background: var(--cta); color:#052e13; font-weight: 700; text-decoration: none;
-      transition: transform .05s ease, filter .15s ease;
-    }
-    .cta:hover { filter: brightness(1.05); }
-    .cta:active { transform: translateY(1px); }
-    .small { font-size: 13px; color: rgba(229,231,235,.75); margin-top: 10px; }
-    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
-    @media (max-width: 860px){ .grid{ grid-template-columns: 1fr; } }
-    .item h3 { margin: 0 0 6px; font-size: 16px; }
-    .footer { margin-top: 22px; color: rgba(229,231,235,.55); font-size: 13px; }
-  </style>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
-  <main class="wrap">
+  <!-- Background effects -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__glow"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Voltar ao topo">
+        <span class="brand__dot"></span>
+        <span class="brand__name">DJs na Pista</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#vantagens">Vantagens</a>
+        <a href="#parceria">Parceria</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn--small btn--primary" href="#cta">
+        Falar agora
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
     <section class="hero">
-      <div class="card">
-        <h1>Headline clara do seu projeto</h1>
-        <p>
-          Uma frase curta explicando o benefício principal. Ex.: “Ajudamos <b>X</b> a alcançar <b>Y</b> em <b>Z</b>.”
-        </p>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">
+            <span class="pill__spark"></span>
+            <span>Line completo • Cachê acessível • Festival vibes</span>
+          </div>
 
-        <a class="cta"
-           href="https://wa.me/55SEUNUMERO?text=Olá%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
-           target="_blank" rel="noopener">
-          Falar no WhatsApp
-        </a>
+          <h1 class="glitch" data-text="O LINE NEON PRA SUA FESTA">
+            O LINE NEON PRA SUA FESTA
+          </h1>
 
-        <div class="badges">
-          <span class="badge">✅ Benefício 1</span>
-          <span class="badge">⚡ Benefício 2</span>
-          <span class="badge">🔒 Benefício 3</span>
+          <p class="lead">
+            Conectamos <strong>atléticas</strong>, <strong>produtores</strong> e <strong>casas noturnas</strong> a um roster com
+            <strong>+40 DJs ativos</strong> (funk, mega funk, tech house, rap, trap e mais), agenciados pela <strong>LSD Recordz</strong>.
+          </p>
+
+          <div class="cta-row" id="cta">
+            <a class="btn btn--primary btn--glow js-wa" href="#" target="_blank" rel="noopener">
+              Montar meu line no WhatsApp
+              <span class="btn__icon" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="btn btn--ghost" href="#vantagens">
+              Ver vantagens
+            </a>
+          </div>
+
+          <div class="microproof">
+            <div class="microproof__item">
+              <span class="tag">+40 DJs</span>
+              <span class="muted">ativos e prontos</span>
+            </div>
+            <div class="microproof__item">
+              <span class="tag">R$150–R$350</span>
+              <span class="muted">sets de 1h a 1h30</span>
+            </div>
+            <div class="microproof__item">
+              <span class="tag">Hotlines 7–8%</span>
+              <span class="muted">taxa reduzida*</span>
+            </div>
+          </div>
+
+          <div class="logos">
+            <div class="logo-card">
+              <img src="./assets/lsd-recordz.png" alt="LSD Recordz" />
+              <span class="muted">Agência / Label</span>
+            </div>
+            <div class="logo-card">
+              <img src="./assets/hotlines.png" alt="Hotlines" />
+              <span class="muted">Parceria estratégica</span>
+            </div>
+          </div>
+
+          <p class="disclaimer muted">
+            *No primeiro ano: taxa reduzida via parceria (sujeito a disponibilidade/condições).
+          </p>
         </div>
 
-        <div class="footer">© <span id="year"></span> Seu Projeto</div>
+        <div class="hero__panel">
+          <div class="panel card">
+            <div class="panel__header">
+              <span class="panel__title">Simulador rápido de line</span>
+              <span class="panel__badge">Orgânico • Conversão via WhatsApp</span>
+            </div>
+
+            <div class="panel__body">
+              <div class="calc">
+                <div class="calc__row">
+                  <span>Exemplo de orçamento</span>
+                  <strong>R$ 2.500</strong>
+                </div>
+                <div class="calc__row">
+                  <span>DJs no line</span>
+                  <strong>10+</strong>
+                </div>
+                <div class="calc__row">
+                  <span>Espaço pra headliner</span>
+                  <strong>Sim</strong>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <p class="muted">
+                Quer que eu monte um line ideal pra sua realidade (tipo de evento, horário, estilos e orçamento)?
+              </p>
+
+              <a class="btn btn--primary btn--full js-wa" href="#" target="_blank" rel="noopener">
+                Quero o line ideal agora
+                <span class="btn__icon" aria-hidden="true">↗</span>
+              </a>
+
+              <div class="chips">
+                <span class="chip">🎛️ Tech House</span>
+                <span class="chip">🔥 Funk</span>
+                <span class="chip">💥 Mega Funk</span>
+                <span class="chip">🕶️ Trap</span>
+                <span class="chip">🎤 Rap</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ticker" aria-hidden="true">
+            <div class="ticker__track">
+              <span>LINE COMPLETO</span>
+              <span>NEON FESTIVAL</span>
+              <span>GLITCH VIBES</span>
+              <span>BOOKING RÁPIDO</span>
+              <span>LINE COMPLETO</span>
+              <span>NEON FESTIVAL</span>
+              <span>GLITCH VIBES</span>
+              <span>BOOKING RÁPIDO</span>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <aside class="card">
-        <h2 style="margin:0 0 10px;">O que você entrega</h2>
-        <div class="grid">
-          <div class="item">
-            <h3>Resultado</h3>
-            <p>Descreva o resultado final (curto e direto).</p>
+    <!-- COMO FUNCIONA -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section__head">
+          <h2>Como funciona (sem enrolação)</h2>
+          <p class="muted">Você chama no WhatsApp, eu entendo o evento e devolvo um line fechado em minutos.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card step">
+            <div class="step__num">01</div>
+            <h3>Briefing rápido</h3>
+            <p class="muted">Tipo de evento, cidade, público, horário e estilos.</p>
+            <a class="link js-wa" href="#" target="_blank" rel="noopener">Enviar briefing no WhatsApp →</a>
+          </article>
+
+          <article class="card step">
+            <div class="step__num">02</div>
+            <h3>Line inteligente</h3>
+            <p class="muted">Montamos um line que prende pista e melhora o resultado do bar/ingresso.</p>
+            <a class="link" href="#vantagens">Ver vantagens →</a>
+          </article>
+
+          <article class="card step">
+            <div class="step__num">03</div>
+            <h3>Booking e parceria</h3>
+            <p class="muted">Fechou com a gente? Você acessa condições especiais via Hotlines.</p>
+            <a class="link" href="#parceria">Entender a parceria →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section class="section" id="vantagens">
+      <div class="container">
+        <div class="section__head">
+          <h2>Por que isso aumenta o lucro do evento</h2>
+          <p class="muted">O jogo é simples: mais energia de pista + custo controlado = mais margem.</p>
+        </div>
+
+        <div class="split">
+          <div class="card feature">
+            <h3>🎚️ Cachê acessível</h3>
+            <p class="muted">
+              De <strong>R$150 a R$350</strong> por set (1h a 1h30). Você consegue montar um line forte sem estourar orçamento.
+            </p>
+            <a class="btn btn--ghost js-wa" href="#" target="_blank" rel="noopener">Quero opções por orçamento</a>
           </div>
-          <div class="item">
-            <h3>Pra quem</h3>
-            <p>Quem é o público ideal (ICP) do projeto.</p>
+
+          <div class="card feature">
+            <h3>🔥 Line com variedade real</h3>
+            <p class="muted">
+              Funk, mega funk, tech house, rap, trap e mais. A gente monta o fluxo do evento (warm-up → pico → fechamento).
+            </p>
+            <a class="btn btn--ghost" href="#faq">Ver dúvidas comuns</a>
           </div>
-          <div class="item">
-            <h3>Como funciona</h3>
-            <p>1–2 passos simples (ex.: diagnóstico → proposta).</p>
+
+          <div class="card feature">
+            <h3>🧨 Curadoria e agenciamento</h3>
+            <p class="muted">
+              DJs agenciados pela <strong>LSD Recordz</strong> — você não fica refém de improviso.
+            </p>
+            <a class="btn btn--ghost js-wa" href="#" target="_blank" rel="noopener">Receber portfólio</a>
+          </div>
+
+          <div class="card feature">
+            <h3>🚀 Ponte SP/RJ</h3>
+            <p class="muted">
+              Conexão com gravadoras e bookings estratégicos quando fizer sentido subir nível do evento.
+            </p>
+            <a class="btn btn--ghost js-wa" href="#" target="_blank" rel="noopener">Falar sobre booking estratégico</a>
           </div>
         </div>
-        <p class="small">Dica: mantenha tudo acima da dobra bem objetivo.</p>
-      </aside>
+      </div>
+    </section>
+
+    <!-- PARCERIA -->
+    <section class="section" id="parceria">
+      <div class="container">
+        <div class="section__head">
+          <h2>Diferencial: parceria Hotlines (taxa reduzida)</h2>
+          <p class="muted">
+            Fechando com o Projeto DJs na Pista, você entra com taxa de <strong>7% a 8%</strong> no primeiro ano.
+            No mercado costuma variar entre <strong>10% e 12%</strong>.
+          </p>
+        </div>
+
+        <div class="card promo">
+          <div class="promo__left">
+            <h3 class="promo__title">Mais dinheiro no caixa</h3>
+            <p class="muted">
+              Taxa menor = mais margem pra investir em headliner, estrutura (luz/som) e marketing orgânico.
+            </p>
+
+            <div class="promo__cta">
+              <a class="btn btn--primary btn--glow js-wa" href="#" target="_blank" rel="noopener">
+                Quero garantir a condição
+                <span class="btn__icon" aria-hidden="true">↗</span>
+              </a>
+              <span class="muted small">Condição sujeita a disponibilidade.</span>
+            </div>
+          </div>
+
+          <div class="promo__right">
+            <div class="stat">
+              <span class="stat__label">Taxa parceria</span>
+              <span class="stat__value">7–8%</span>
+            </div>
+            <div class="stat">
+              <span class="stat__label">Média mercado</span>
+              <span class="stat__value muted">10–12%</span>
+            </div>
+            <div class="stat">
+              <span class="stat__label">Formato</span>
+              <span class="stat__value">1º ano</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="final">
+      <div class="container">
+        <div class="final__card card">
+          <h2 class="glitch glitch--small" data-text="BORA LOTAR A PISTA?">BORA LOTAR A PISTA?</h2>
+          <p class="muted">
+            Me chama agora e eu te devolvo um line com estilos, horários e cachês dentro do seu orçamento.
+          </p>
+
+          <div class="final__actions">
+            <a class="btn btn--primary btn--glow js-wa" href="#" target="_blank" rel="noopener">
+              Montar meu line no WhatsApp
+              <span class="btn__icon" aria-hidden="true">↗</span>
+            </a>
+            <a class="btn btn--ghost" href="#como-funciona">Rever como funciona</a>
+          </div>
+
+          <p class="muted small">Edson (DJ Legend Eddie) • Projeto DJs na Pista • LSD Recordz</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2>FAQ</h2>
+          <p class="muted">As dúvidas que mais aparecem antes de fechar.</p>
+        </div>
+
+        <div class="faq">
+          <details class="card">
+            <summary>Vocês atendem minha cidade/região?</summary>
+            <p class="muted">Sim. Me chama no WhatsApp com cidade + data + tipo de evento que eu te retorno as opções viáveis.</p>
+            <a class="link js-wa" href="#" target="_blank" rel="noopener">Enviar cidade e data →</a>
+          </details>
+
+          <details class="card">
+            <summary>Qual o tempo de set?</summary>
+            <p class="muted">Em geral, 1h a 1h30 por DJ. A gente monta o fluxo certinho para manter pista cheia.</p>
+          </details>
+
+          <details class="card">
+            <summary>Como funciona pagamento/contrato?</summary>
+            <p class="muted">A gente alinha tudo no WhatsApp e formaliza o combinado (cachê, horário, estrutura, etc.).</p>
+          </details>
+        </div>
+
+        <footer class="footer muted">
+          © <span id="year"></span> Projeto DJs na Pista • Orgânico • Conversão via WhatsApp
+        </footer>
+      </div>
     </section>
   </main>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // WhatsApp link (centralizado)
+    const phone = "5541998908253";
+    const text =
+      "Fala, Edson! Vim pela landing. Quero montar um line pra um evento.%0A%0A" +
+      "Cidade:%20_____%0AData:%20_____%0APúblico:%20(Atlética/Produtor/Casa)%0A" +
+      "Orçamento aproximado:%20R$_____%0AEstilos:%20(Funk/Mega%20Funk/Tech%20House/Rap/Trap)%0A" +
+      "Horário do evento:%20_____%0A";
+
+    const wa = `https://wa.me/${phone}?text=${text}`;
+    document.querySelectorAll(".js-wa").forEach(a => a.setAttribute("href", wa));
   </script>
 </body>
 </html>
