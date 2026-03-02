@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seu Projeto</title>
+  <meta name="description" content="Uma frase curta explicando o valor do projeto." />
+
+  <style>
+    :root { --bg:#0b0f19; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --cta:#22c55e; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 600px at 20% 0%, #1f2937 0%, var(--bg) 55%);
+      color: var(--text);
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 56px 20px; }
+    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; }
+    @media (max-width: 860px){ .hero{ grid-template-columns: 1fr; } }
+    .card {
+      background: color-mix(in oklab, var(--card) 88%, transparent);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+      backdrop-filter: blur(8px);
+    }
+    h1 { font-size: clamp(30px, 4vw, 44px); line-height: 1.05; margin: 0 0 12px; }
+    p { margin: 0 0 14px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+    .badges { display:flex; flex-wrap:wrap; gap:10px; margin-top: 14px; }
+    .badge { border:1px solid rgba(255,255,255,.10); padding:8px 10px; border-radius: 999px; color: var(--text); font-size: 13px; }
+    .cta {
+      display:inline-flex; align-items:center; justify-content:center;
+      padding: 14px 16px; border-radius: 12px;
+      background: var(--cta); color:#052e13; font-weight: 700; text-decoration: none;
+      transition: transform .05s ease, filter .15s ease;
+    }
+    .cta:hover { filter: brightness(1.05); }
+    .cta:active { transform: translateY(1px); }
+    .small { font-size: 13px; color: rgba(229,231,235,.75); margin-top: 10px; }
+    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 18px; }
+    @media (max-width: 860px){ .grid{ grid-template-columns: 1fr; } }
+    .item h3 { margin: 0 0 6px; font-size: 16px; }
+    .footer { margin-top: 22px; color: rgba(229,231,235,.55); font-size: 13px; }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <h1>Headline clara do seu projeto</h1>
+        <p>
+          Uma frase curta explicando o benefício principal. Ex.: “Ajudamos <b>X</b> a alcançar <b>Y</b> em <b>Z</b>.”
+        </p>
+
+        <a class="cta"
+           href="https://wa.me/55SEUNUMERO?text=Olá%20vim%20pelo%20site%20e%20quero%20saber%20mais!"
+           target="_blank" rel="noopener">
+          Falar no WhatsApp
+        </a>
+
+        <div class="badges">
+          <span class="badge">✅ Benefício 1</span>
+          <span class="badge">⚡ Benefício 2</span>
+          <span class="badge">🔒 Benefício 3</span>
+        </div>
+
+        <div class="footer">© <span id="year"></span> Seu Projeto</div>
+      </div>
+
+      <aside class="card">
+        <h2 style="margin:0 0 10px;">O que você entrega</h2>
+        <div class="grid">
+          <div class="item">
+            <h3>Resultado</h3>
+            <p>Descreva o resultado final (curto e direto).</p>
+          </div>
+          <div class="item">
+            <h3>Pra quem</h3>
+            <p>Quem é o público ideal (ICP) do projeto.</p>
+          </div>
+          <div class="item">
+            <h3>Como funciona</h3>
+            <p>1–2 passos simples (ex.: diagnóstico → proposta).</p>
+          </div>
+        </div>
+        <p class="small">Dica: mantenha tudo acima da dobra bem objetivo.</p>
+      </aside>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
